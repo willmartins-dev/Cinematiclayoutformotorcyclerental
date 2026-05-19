@@ -1,5 +1,3 @@
-onlyBuiltDependencies:
-  - '@tailwindcss/oxide'
-  - esbuild
+dangerouslyAllowAllBuilds: true
 overrides:
   vite: '6.3.5'
