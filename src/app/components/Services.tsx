@@ -31,7 +31,7 @@ export function Services() {
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   return (
-    <section id="services" className="relative py-24 md:py-36 bg-[#0a0a0a]">
+    <section id="services" className="relative py-24 md:py-36 bg-[#192334]">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <motion.div
           ref={ref}
@@ -40,13 +40,13 @@ export function Services() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <p className="text-[#ff2a2a] uppercase tracking-[0.4em] text-xs md:text-sm mb-6 font-semibold" style={{ fontFamily: 'Inter, sans-serif' }}>
+          <p className="text-[#22c55e] uppercase tracking-[0.4em] text-xs md:text-sm mb-6 font-semibold" style={{ fontFamily: 'Inter, sans-serif' }}>
             Nossos Diferenciais
           </p>
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight" style={{ fontFamily: 'Orbitron, sans-serif', letterSpacing: '-0.02em' }}>
             POR QUE ESCOLHER A
             <br />
-            <span className="text-[#ff2a2a]">MODO CORRE</span>
+            <span className="text-[#22c55e]">MODO CORRE</span>
           </h2>
         </motion.div>
 
@@ -59,13 +59,13 @@ export function Services() {
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group relative bg-[#141414] border border-white/5 p-8 hover:border-[#ff2a2a] transition-all duration-500 rounded-sm overflow-hidden"
+                className="group relative bg-[#1e2d42] border border-white/5 p-8 hover:border-[#22c55e] transition-all duration-500 rounded-sm overflow-hidden"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-[#ff2a2a]/0 to-[#ff2a2a]/0 group-hover:from-[#ff2a2a]/5 group-hover:to-[#ff2a2a]/0 transition-all duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#22c55e]/0 to-[#22c55e]/0 group-hover:from-[#22c55e]/5 group-hover:to-[#22c55e]/0 transition-all duration-500"></div>
                 <div className="relative">
                   <div className="mb-6 relative">
-                    <Icon className="w-14 h-14 text-[#ff2a2a] transition-transform duration-500 group-hover:scale-110" strokeWidth={1.5} />
-                    <div className="absolute -inset-4 bg-[#ff2a2a]/10 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <Icon className="w-14 h-14 text-[#22c55e] transition-transform duration-500 group-hover:scale-110" strokeWidth={1.5} />
+                    <div className="absolute -inset-4 bg-[#22c55e]/10 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3" style={{ fontFamily: 'Inter, sans-serif' }}>{service.title}</h3>
                   <p className="text-white/50 leading-relaxed font-light" style={{ fontFamily: 'Inter, sans-serif' }}>{service.description}</p>

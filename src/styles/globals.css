@@ -12,7 +12,7 @@ body {
 }
 
 ::selection {
-  background-color: #ff2a2a;
+  background-color: #22c55e;
   color: #ffffff;
 }
 
@@ -21,14 +21,14 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  background: #192334;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ff2a2a;
+  background: #22c55e;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ff1a1a;
+  background: #16a34a;
 }

@@ -6,7 +6,7 @@ import { Phone, Mail, MapPin, Send } from "lucide-react";
 export function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
-  
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -16,7 +16,6 @@ export function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
     console.log("Form submitted:", formData);
   };
 
@@ -28,7 +27,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-24 md:py-36 bg-black">
+    <section id="contact" className="relative py-24 md:py-36 bg-[#243347]">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <motion.div
           ref={ref}
@@ -37,13 +36,13 @@ export function Contact() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <p className="text-[#ff2a2a] uppercase tracking-[0.4em] text-xs md:text-sm mb-6 font-semibold" style={{ fontFamily: 'Inter, sans-serif' }}>
+          <p className="text-[#22c55e] uppercase tracking-[0.4em] text-xs md:text-sm mb-6 font-semibold" style={{ fontFamily: 'Inter, sans-serif' }}>
             Fale Conosco
           </p>
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight" style={{ fontFamily: 'Orbitron, sans-serif', letterSpacing: '-0.02em' }}>
             PRONTO PARA
             <br />
-            <span className="text-[#ff2a2a]">ACELERAR?</span>
+            <span className="text-[#22c55e]">ACELERAR?</span>
           </h2>
           <p className="text-white/50 text-lg max-w-2xl mx-auto font-light leading-relaxed" style={{ fontFamily: 'Inter, sans-serif' }}>
             Entre em contato conosco e reserve sua moto. Nossa equipe está pronta
@@ -59,8 +58,8 @@ export function Contact() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-6"
           >
-            <div className="flex items-start gap-5 group bg-[#141414] border border-white/5 p-6 hover:border-[#ff2a2a] transition-all duration-300 rounded-sm">
-              <div className="bg-[#ff2a2a] p-4 group-hover:scale-110 transition-transform rounded-sm">
+            <div className="flex items-start gap-5 group bg-[#1e2d42] border border-white/5 p-6 hover:border-[#22c55e] transition-all duration-300 rounded-sm">
+              <div className="bg-[#22c55e] p-4 group-hover:scale-110 transition-transform rounded-sm">
                 <Phone className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -70,8 +69,8 @@ export function Contact() {
               </div>
             </div>
 
-            <div className="flex items-start gap-5 group bg-[#141414] border border-white/5 p-6 hover:border-[#ff2a2a] transition-all duration-300 rounded-sm">
-              <div className="bg-[#ff2a2a] p-4 group-hover:scale-110 transition-transform rounded-sm">
+            <div className="flex items-start gap-5 group bg-[#1e2d42] border border-white/5 p-6 hover:border-[#22c55e] transition-all duration-300 rounded-sm">
+              <div className="bg-[#22c55e] p-4 group-hover:scale-110 transition-transform rounded-sm">
                 <Mail className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -81,8 +80,8 @@ export function Contact() {
               </div>
             </div>
 
-            <div className="flex items-start gap-5 group bg-[#141414] border border-white/5 p-6 hover:border-[#ff2a2a] transition-all duration-300 rounded-sm">
-              <div className="bg-[#ff2a2a] p-4 group-hover:scale-110 transition-transform rounded-sm">
+            <div className="flex items-start gap-5 group bg-[#1e2d42] border border-white/5 p-6 hover:border-[#22c55e] transition-all duration-300 rounded-sm">
+              <div className="bg-[#22c55e] p-4 group-hover:scale-110 transition-transform rounded-sm">
                 <MapPin className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -92,16 +91,16 @@ export function Contact() {
               </div>
             </div>
 
-            <div className="bg-[#141414] border border-white/5 p-8 mt-6 rounded-sm">
+            <div className="bg-[#1e2d42] border border-white/5 p-8 mt-6 rounded-sm">
               <h3 className="text-xl font-bold text-white mb-4" style={{ fontFamily: 'Inter, sans-serif' }}>Horário de Funcionamento</h3>
               <div className="space-y-3 text-white/60 font-light" style={{ fontFamily: 'Inter, sans-serif' }}>
                 <div className="flex justify-between">
                   <span>Segunda - Sexta</span>
-                  <span className="text-[#ff2a2a] font-semibold">24 horas</span>
+                  <span className="text-[#22c55e] font-semibold">24 horas</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Sábado - Domingo</span>
-                  <span className="text-[#ff2a2a] font-semibold">24 horas</span>
+                  <span className="text-[#22c55e] font-semibold">24 horas</span>
                 </div>
               </div>
             </div>
@@ -112,7 +111,7 @@ export function Contact() {
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-[#141414] border border-white/5 p-8 rounded-sm"
+            className="bg-[#1e2d42] border border-white/5 p-8 rounded-sm"
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
@@ -126,7 +125,7 @@ export function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full bg-black/50 border border-white/10 text-white px-5 py-4 focus:outline-none focus:border-[#ff2a2a] transition-colors rounded-sm font-light placeholder:text-white/30"
+                  className="w-full bg-[#192334]/80 border border-white/10 text-white px-5 py-4 focus:outline-none focus:border-[#22c55e] transition-colors rounded-sm font-light placeholder:text-white/30"
                   placeholder="Seu nome"
                   style={{ fontFamily: 'Inter, sans-serif' }}
                 />
@@ -143,7 +142,7 @@ export function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full bg-black/50 border border-white/10 text-white px-5 py-4 focus:outline-none focus:border-[#ff2a2a] transition-colors rounded-sm font-light placeholder:text-white/30"
+                  className="w-full bg-[#192334]/80 border border-white/10 text-white px-5 py-4 focus:outline-none focus:border-[#22c55e] transition-colors rounded-sm font-light placeholder:text-white/30"
                   placeholder="seu@email.com"
                   style={{ fontFamily: 'Inter, sans-serif' }}
                 />
@@ -160,7 +159,7 @@ export function Contact() {
                   value={formData.phone}
                   onChange={handleChange}
                   required
-                  className="w-full bg-black/50 border border-white/10 text-white px-5 py-4 focus:outline-none focus:border-[#ff2a2a] transition-colors rounded-sm font-light placeholder:text-white/30"
+                  className="w-full bg-[#192334]/80 border border-white/10 text-white px-5 py-4 focus:outline-none focus:border-[#22c55e] transition-colors rounded-sm font-light placeholder:text-white/30"
                   placeholder="(11) 99999-9999"
                   style={{ fontFamily: 'Inter, sans-serif' }}
                 />
@@ -177,7 +176,7 @@ export function Contact() {
                   onChange={handleChange}
                   required
                   rows={4}
-                  className="w-full bg-black/50 border border-white/10 text-white px-5 py-4 focus:outline-none focus:border-[#ff2a2a] transition-colors resize-none rounded-sm font-light placeholder:text-white/30"
+                  className="w-full bg-[#192334]/80 border border-white/10 text-white px-5 py-4 focus:outline-none focus:border-[#22c55e] transition-colors resize-none rounded-sm font-light placeholder:text-white/30"
                   placeholder="Conte-nos sobre sua necessidade..."
                   style={{ fontFamily: 'Inter, sans-serif' }}
                 ></textarea>
@@ -185,7 +184,7 @@ export function Contact() {
 
               <button
                 type="submit"
-                className="w-full bg-[#ff2a2a] hover:bg-[#ff1a1a] text-white px-8 py-4 font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(255,42,42,0.4)] rounded-sm"
+                className="w-full bg-[#22c55e] hover:bg-[#16a34a] text-white px-8 py-4 font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(34,197,94,0.4)] rounded-sm"
                 style={{ fontFamily: 'Inter, sans-serif' }}
               >
                 <Send className="w-5 h-5" />

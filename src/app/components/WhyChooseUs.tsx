@@ -19,7 +19,7 @@ export function WhyChooseUs() {
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   return (
-    <section id="about" className="relative py-24 md:py-36 bg-[#0a0a0a]">
+    <section id="about" className="relative py-24 md:py-36 bg-[#192334]">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.03]">
         <div className="absolute inset-0" style={{
@@ -36,13 +36,13 @@ export function WhyChooseUs() {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.8 }}
           >
-            <p className="text-[#ff2a2a] uppercase tracking-[0.4em] text-xs md:text-sm mb-6 font-semibold" style={{ fontFamily: 'Inter, sans-serif' }}>
+            <p className="text-[#22c55e] uppercase tracking-[0.4em] text-xs md:text-sm mb-6 font-semibold" style={{ fontFamily: 'Inter, sans-serif' }}>
               Nossa Promessa
             </p>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-8 leading-tight" style={{ fontFamily: 'Orbitron, sans-serif', letterSpacing: '-0.02em' }}>
               COMPROMISSO COM A
               <br />
-              <span className="text-[#ff2a2a]">EXCELÊNCIA</span>
+              <span className="text-[#22c55e]">EXCELÊNCIA</span>
             </h2>
             <p className="text-white/60 text-lg leading-relaxed mb-6 font-light" style={{ fontFamily: 'Inter, sans-serif' }}>
               Na Modo Corre, entendemos que cada viagem é única. Por isso, oferecemos
@@ -69,9 +69,9 @@ export function WhyChooseUs() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex items-start gap-3 bg-[#141414] border border-white/5 p-5 hover:border-[#ff2a2a] transition-all duration-300 rounded-sm group"
+                className="flex items-start gap-3 bg-[#1e2d42] border border-white/5 p-5 hover:border-[#22c55e] transition-all duration-300 rounded-sm group"
               >
-                <CheckCircle className="w-5 h-5 text-[#ff2a2a] flex-shrink-0 mt-0.5 transition-transform duration-300 group-hover:scale-110" />
+                <CheckCircle className="w-5 h-5 text-[#22c55e] flex-shrink-0 mt-0.5 transition-transform duration-300 group-hover:scale-110" />
                 <span className="text-white/70 font-light" style={{ fontFamily: 'Inter, sans-serif' }}>{benefit}</span>
               </motion.div>
             ))}

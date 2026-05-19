@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { ChevronDown } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import logo from "@/assets/logo.png";
 
 export function Hero() {
   const scrollToServices = () => {
@@ -17,7 +18,7 @@ export function Hero() {
           alt="Motorcycle"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#192334]/80 via-[#192334]/60 to-[#192334]"></div>
       </div>
 
       {/* Navigation */}
@@ -27,25 +28,25 @@ export function Hero() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative z-10 flex justify-between items-center px-6 md:px-12 lg:px-20 py-6 backdrop-blur-sm"
       >
-        <div className="text-2xl md:text-3xl font-bold text-white tracking-tight" style={{ fontFamily: 'Orbitron, sans-serif' }}>
-          MODO <span className="text-[#ff2a2a]">CORRE</span>
-        </div>
+        <a href="#">
+          <img src={logo} alt="Modo Corre" className="h-10 md:h-12 w-auto object-contain" />
+        </a>
         <div className="hidden md:flex gap-8 text-white/80 font-medium">
-          <a href="#services" className="hover:text-[#ff2a2a] transition-all duration-300 relative group">
+          <a href="#services" className="hover:text-[#22c55e] transition-all duration-300 relative group">
             Serviços
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#ff2a2a] transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#22c55e] transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a href="#fleet" className="hover:text-[#ff2a2a] transition-all duration-300 relative group">
+          <a href="#fleet" className="hover:text-[#22c55e] transition-all duration-300 relative group">
             Frota
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#ff2a2a] transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#22c55e] transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a href="#about" className="hover:text-[#ff2a2a] transition-all duration-300 relative group">
+          <a href="#about" className="hover:text-[#22c55e] transition-all duration-300 relative group">
             Sobre
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#ff2a2a] transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#22c55e] transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a href="#contact" className="hover:text-[#ff2a2a] transition-all duration-300 relative group">
+          <a href="#contact" className="hover:text-[#22c55e] transition-all duration-300 relative group">
             Contato
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#ff2a2a] transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#22c55e] transition-all duration-300 group-hover:w-full"></span>
           </a>
         </div>
       </motion.nav>
@@ -62,23 +63,15 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.6 }}
-            className="text-[#ff2a2a] uppercase tracking-[0.4em] text-xs md:text-sm mb-6 font-semibold"
+            className="text-[#22c55e] uppercase tracking-[0.4em] text-xs md:text-sm mb-6 font-semibold"
             style={{ fontFamily: 'Inter, sans-serif' }}
           >
             Locadora de Motos Premium
           </motion.p>
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-white mb-8 leading-[0.9]" style={{ fontFamily: 'Orbitron, sans-serif', letterSpacing: '-0.03em' }}>
-            ACELERE SUA
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-8 leading-[1.1]" style={{ fontFamily: 'Orbitron, sans-serif', letterSpacing: '-0.03em' }}>
+            COMECE A TRABALHAR
             <br />
-            <span className="text-[#ff2a2a] relative inline-block">
-              LIBERDADE
-              <motion.span
-                initial={{ width: 0 }}
-                animate={{ width: "100%" }}
-                transition={{ duration: 1, delay: 1.5 }}
-                className="absolute bottom-2 left-0 h-1 bg-[#ff2a2a]"
-              ></motion.span>
-            </span>
+            <span className="text-[#22c55e]">HOJE MESMO!</span>
           </h1>
           <motion.p
             initial={{ opacity: 0 }}
@@ -98,14 +91,14 @@ export function Hero() {
           >
             <a
               href="#contact"
-              className="bg-[#ff2a2a] hover:bg-[#ff1a1a] text-white px-10 py-4 text-base font-bold uppercase tracking-wider transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(255,42,42,0.5)] rounded-sm"
+              className="bg-[#22c55e] hover:bg-[#16a34a] text-white px-10 py-4 text-base font-bold uppercase tracking-wider transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(34,197,94,0.5)] rounded-sm"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
               Alugue Agora
             </a>
             <a
               href="#fleet"
-              className="border-2 border-white/30 hover:border-[#ff2a2a] text-white px-10 py-4 text-base font-bold uppercase tracking-wider transition-all hover:bg-[#ff2a2a]/10 rounded-sm backdrop-blur-sm"
+              className="border-2 border-white/30 hover:border-[#22c55e] text-white px-10 py-4 text-base font-bold uppercase tracking-wider transition-all hover:bg-[#22c55e]/10 rounded-sm backdrop-blur-sm"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
               Ver Frota
