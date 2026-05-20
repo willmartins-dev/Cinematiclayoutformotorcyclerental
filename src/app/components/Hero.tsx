@@ -60,28 +60,29 @@ export function Hero() {
       </motion.nav>
 
       {/* Hero Content */}
-      <div className="relative z-10 h-screen flex flex-col justify-center items-start px-6 md:px-12 lg:px-20 pt-20 max-w-3xl">
+      <div className="relative z-10 h-screen flex flex-col justify-center items-center text-center px-6 md:px-12 lg:px-20 pt-24">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+          className="max-w-4xl"
         >
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-black text-white mb-4 leading-tight" style={{ fontFamily: 'Orbitron, sans-serif', letterSpacing: '-0.02em' }}>
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-4 leading-tight" style={{ fontFamily: 'Orbitron, sans-serif', letterSpacing: '-0.02em' }}>
             Alugue uma moto e comece a trabalhar hoje mesmo!
           </h1>
-          <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-[#00d563] mb-6" style={{ fontFamily: 'Orbitron, sans-serif' }}>
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#00d563] mb-8" style={{ fontFamily: 'Orbitron, sans-serif' }}>
             Escolha a Modo Corre
           </h2>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.9 }}
-            className="mb-8"
+            className="mb-10"
           >
             <p className="text-white font-bold text-base md:text-lg mb-2" style={{ fontFamily: 'Inter, sans-serif' }}>
               Adquira sua moto com facilidade e sem burocracia
             </p>
-            <p className="text-white/80 text-base md:text-lg font-light leading-relaxed" style={{ fontFamily: 'Inter, sans-serif' }}>
+            <p className="text-white/80 text-base md:text-lg font-light leading-relaxed max-w-2xl mx-auto" style={{ fontFamily: 'Inter, sans-serif' }}>
               Com o Plano de Aquisição da <strong className="text-white">Modo Corre</strong>, você aluga e, ao final do contrato, a moto é sua. Manutenção inclusa, seguro completo e parcelas que cabem no seu bolso.
             </p>
           </motion.div>
