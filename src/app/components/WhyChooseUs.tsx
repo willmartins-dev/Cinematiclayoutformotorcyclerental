@@ -35,11 +35,6 @@ const locations = [
     name: "São Paulo",
     cities: ["Campinas", "Sorocaba", "São José do Rio Preto"],
     featured: true
-  },
-  {
-    name: "Roraima",
-    cities: ["Boa Vista"],
-    featured: false
   }
 ];
 
