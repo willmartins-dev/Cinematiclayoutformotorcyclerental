@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { ChevronDown, Facebook, Instagram } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import logo from "../../assets/logo.png";
 
 export function Hero() {
   const scrollToServices = () => {
@@ -27,12 +28,7 @@ export function Hero() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 md:px-12 lg:px-20 py-6 backdrop-blur-md bg-[#1a1f1e]/80 border-b border-[#00d563]/10"
       >
-        <div className="flex flex-col leading-none">
-          <span className="text-[10px] text-white/60 uppercase tracking-widest font-medium" style={{ fontFamily: 'Inter, sans-serif' }}>SEMINOVAS</span>
-          <div className="text-2xl md:text-3xl font-bold text-white tracking-tight" style={{ fontFamily: 'Orbitron, sans-serif' }}>
-            MODO <span className="text-[#00d563]">CORRE</span>
-          </div>
-        </div>
+        <img src={logo} alt="Modo Corre" className="h-12 md:h-14 w-auto object-contain" />
         <div className="flex items-center gap-4">
           <a
             href="https://facebook.com"

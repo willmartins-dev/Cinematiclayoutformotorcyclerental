@@ -27,7 +27,6 @@ const motorcycles = [
   }
 ];
 
-const tickerText = "Motos revisadas e com seguro incluso ❖ Comece a trabalhar hoje mesmo ❖ Transforme seu aluguel em conquista ❖ Modo Corre ❖ Locação de motos ❖ ";
 
 export function Fleet() {
   const ref = useRef(null);
@@ -106,20 +105,6 @@ export function Fleet() {
         </div>
       </div>
 
-      {/* Scrolling Ticker */}
-      <div className="overflow-hidden bg-white border-y border-[#00d563]/30 py-3 mt-12">
-        <motion.div
-          animate={{ x: ["0%", "-50%"] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="flex whitespace-nowrap"
-        >
-          {[...Array(4)].map((_, i) => (
-            <span key={i} className="text-[#0a0a0a] font-semibold text-sm uppercase tracking-wide mx-0 inline-block" style={{ fontFamily: 'Inter, sans-serif' }}>
-              {tickerText}
-            </span>
-          ))}
-        </motion.div>
-      </div>
     </section>
   );
 }
