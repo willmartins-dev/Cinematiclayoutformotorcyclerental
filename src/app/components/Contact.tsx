@@ -24,15 +24,15 @@ export function Contact() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="space-y-6"
+            className="flex flex-col h-full"
           >
-            <div className="bg-[#1f2827] border border-[#00d563]/20 p-8 rounded-lg">
+            <div className="bg-[#1f2827] border border-[#00d563]/20 p-8 rounded-lg flex-1">
               <div className="flex items-start gap-4 mb-6">
                 <Globe className="w-6 h-6 text-[#00d563]" />
                 <div>
@@ -94,7 +94,7 @@ export function Contact() {
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-[#1f2827] border border-[#00d563]/20 p-4 rounded-lg h-[600px]"
+            className="bg-[#1f2827] border border-[#00d563]/20 p-4 rounded-lg min-h-[500px]"
           >
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.123456789!2d-47.9876543!3d-23.5912345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDM1JzI4LjQiUyA0N8KwNTknMTUuNiJX!5e0!3m2!1spt-BR!2sbr!4v1234567890"
