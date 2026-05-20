@@ -86,14 +86,7 @@ export function Contact() {
               </div>
             </div>
 
-            <div className="bg-[#1f2827] border border-[#00d563]/20 p-6 rounded-lg text-center">
-              <p className="text-white/50 text-sm font-light mb-2" style={{ fontFamily: 'Inter, sans-serif' }}>
-                BRASIL, FRANQUIAS E PARTICIPAÇÕES LTDA
-              </p>
-              <p className="text-white font-bold" style={{ fontFamily: 'Orbitron, sans-serif' }}>
-                Copyright © 2024 Modo Corre
-              </p>
-            </div>
+
           </motion.div>
 
           {/* Map */}
