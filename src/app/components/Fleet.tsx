@@ -47,7 +47,7 @@ export function Fleet() {
   const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   return (
-    <section id="fleet" className="relative py-24 md:py-36 bg-[#1a1f1e]">
+    <section id="fleet" className="relative py-12 md:py-16 bg-[#1a1f1e]">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <motion.div
           ref={ref}

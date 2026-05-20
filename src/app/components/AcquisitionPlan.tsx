@@ -23,7 +23,7 @@ export function AcquisitionPlan() {
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
-    <section className="relative py-20 md:py-28 bg-gradient-to-b from-[#0f1513] to-[#1a1f1e]">
+    <section className="relative py-12 md:py-16 bg-gradient-to-b from-[#0f1513] to-[#1a1f1e]">
       <div className="max-w-6xl mx-auto px-6 md:px-12">
         <motion.div
           ref={ref}
