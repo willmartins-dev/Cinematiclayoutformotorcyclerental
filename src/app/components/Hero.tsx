@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { ChevronDown, Facebook, Instagram } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import logo from "../../assets/logo.png";
+import banner1 from "../../assets/banner1.png";
 
 export function Hero() {
   const scrollToServices = () => {
@@ -13,10 +14,10 @@ export function Hero() {
     <section className="relative h-screen w-full overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
-        <ImageWithFallback
-          src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920"
-          alt="Motoboy"
-          className="w-full h-full object-cover"
+        <img
+          src={banner1}
+          alt="Motoboy Modo Corre"
+          className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#1a1f1e]/90 via-[#1a1f1e]/70 to-[#1a1f1e]"></div>
       </div>
