@@ -2,39 +2,29 @@ import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef } from "react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import { Gauge, Calendar, Banknote } from "lucide-react";
-import planoSeminova from "@/assets/plano-seminova.jpg";
-import planoZeroKm from "@/assets/plano-zero-km.jpg";
-import planoSeminovaPlus from "@/assets/plano-seminova-plus.jpg";
 
-const plans = [
+const motorcycles = [
   {
-    name: "AQUISIÇÃO SEMINOVA",
-    category: "SEMINOVA",
-    image: planoSeminova,
-    km: "Moto de 5 a 32 mil km",
-    contract: "26 meses de contrato",
-    price: "R$ 419,23/semana",
-    featured: false,
+    name: "Honda CG 160 Start",
+    description: "Moto confiável e econômica, ideal para entregas urbanas",
+    image: "https://images.unsplash.com/photo-1558981359-219d6364c9c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+    features: ["Baixo consumo", "Manutenção facilitada", "Conforto garantido"],
+    cta: "Ver Detalhes"
   },
   {
-    name: "AQUISIÇÃO ZERO KM",
-    category: "ZERO KM",
-    image: planoZeroKm,
-    km: "Moto de 0 a 5 mil km",
-    contract: "30 meses de contrato",
-    price: "R$ 436,66/semana",
-    featured: true,
+    name: "Honda CG 160 Fan",
+    description: "Moto versátil e resistente para longas jornadas de trabalho",
+    image: "https://images.unsplash.com/photo-1609630875171-b1321377ee65?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+    features: ["Alta durabilidade", "Econômica", "Perfeita para trabalho"],
+    cta: "Ver Detalhes"
   },
   {
-    name: "AQUISIÇÃO SEMINOVA +32MIL",
-    category: "SEMINOVA +",
-    image: planoSeminovaPlus,
-    km: "Moto acima de 32 mil km",
-    contract: "24 meses de contrato",
-    price: "R$ 419,23/semana",
-    featured: false,
-  },
+    name: "Suzuki GN150",
+    description: "Robusta e eficiente para quem trabalha o dia todo",
+    image: "https://images.unsplash.com/photo-1619767886558-efdc259cde1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+    features: ["Motor potente", "Tanque grande", "Confortável"],
+    cta: "Ver Detalhes"
+  }
 ];
 
 export function Fleet() {
@@ -42,7 +32,7 @@ export function Fleet() {
   const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   return (
-    <section id="fleet" className="relative py-24 md:py-36 bg-[#243347]">
+    <section id="fleet" className="relative py-24 md:py-36 bg-[#1a1f1e]">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <motion.div
           ref={ref}
@@ -51,87 +41,63 @@ export function Fleet() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <p className="text-[#22c55e] uppercase tracking-[0.4em] text-xs md:text-sm mb-6 font-semibold" style={{ fontFamily: 'Inter, sans-serif' }}>
-            Nossos Planos
+          <p className="text-[#00d563] uppercase tracking-[0.4em] text-xs md:text-sm mb-6 font-semibold" style={{ fontFamily: 'Inter, sans-serif' }}>
+            Escolha Sua Moto
           </p>
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight" style={{ fontFamily: 'Orbitron, sans-serif', letterSpacing: '-0.02em' }}>
-            ESCOLHA SEU
+            Motos Perfeitas Para
             <br />
-            <span className="text-[#22c55e]">PLANO</span>
+            <span className="text-[#00d563]">Trabalhar Todo Dia</span>
           </h2>
-          <p className="text-white/50 text-lg max-w-2xl mx-auto font-light leading-relaxed" style={{ fontFamily: 'Inter, sans-serif' }}>
-            Opções flexíveis para você começar a trabalhar hoje mesmo com a moto ideal para o seu perfil.
+          <p className="text-white/60 text-lg max-w-3xl mx-auto font-light leading-relaxed" style={{ fontFamily: 'Inter, sans-serif' }}>
+            Honda e Suzuki: confiáveis, econômicas e preparadas para longas jornadas de trabalho. Escolha a ideal para você!
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
-          {plans.map((plan, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {motorcycles.map((bike, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
-              className={`group relative bg-[#1e2d42] border overflow-hidden transition-all duration-500 rounded-sm
-                ${plan.featured
-                  ? "border-[#22c55e] scale-105 shadow-[0_0_40px_rgba(34,197,94,0.25)] z-10"
-                  : "border-white/5 hover:border-[#22c55e]"
-                }`}
+              className="group relative bg-[#1f2827] border border-[#00d563]/20 overflow-hidden hover:border-[#00d563] transition-all duration-500 rounded-lg"
             >
-              {/* Most Popular Badge */}
-              {plan.featured && (
-                <div className="absolute top-0 left-0 right-0 bg-[#22c55e] text-white text-center text-xs font-bold uppercase tracking-widest py-2 z-20" style={{ fontFamily: 'Inter, sans-serif' }}>
-                  Mais Popular
-                </div>
-              )}
-
               {/* Image Container */}
-              <div className={`relative overflow-hidden ${plan.featured ? "h-56 mt-8" : "h-56"}`}>
+              <div className="relative h-64 overflow-hidden">
                 <ImageWithFallback
-                  src={plan.image}
-                  alt={plan.name}
+                  src={bike.image}
+                  alt={bike.name}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1e2d42] via-[#192334]/60 to-transparent"></div>
-
-                {/* Category Badge */}
-                <div className={`absolute top-4 right-4 px-4 py-2 text-xs font-bold tracking-widest uppercase rounded-sm ${plan.featured ? "bg-[#22c55e]" : "bg-[#22c55e]/80"}`} style={{ fontFamily: 'Inter, sans-serif' }}>
-                  {plan.category}
-                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1f2827] via-[#1a1f1e]/60 to-transparent"></div>
               </div>
 
               {/* Content */}
               <div className="p-6">
-                <h3 className={`font-black text-white mb-5 leading-tight ${plan.featured ? "text-xl" : "text-lg"}`} style={{ fontFamily: 'Orbitron, sans-serif', letterSpacing: '-0.01em' }}>
-                  {plan.name}
-                </h3>
+                <h3 className="text-2xl font-bold text-white mb-3" style={{ fontFamily: 'Orbitron, sans-serif', letterSpacing: '-0.01em' }}>{bike.name}</h3>
+                <p className="text-white/60 mb-5 font-light leading-relaxed" style={{ fontFamily: 'Inter, sans-serif' }}>
+                  {bike.description}
+                </p>
 
-                <div className="space-y-3 mb-6">
-                  <div className="flex items-center gap-3 text-white/70 font-light" style={{ fontFamily: 'Inter, sans-serif' }}>
-                    <Gauge className="w-5 h-5 text-[#22c55e] flex-shrink-0" />
-                    <span>{plan.km}</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-white/70 font-light" style={{ fontFamily: 'Inter, sans-serif' }}>
-                    <Calendar className="w-5 h-5 text-[#22c55e] flex-shrink-0" />
-                    <span>{plan.contract}</span>
-                  </div>
-                  <div className="flex items-center gap-3 font-semibold" style={{ fontFamily: 'Inter, sans-serif' }}>
-                    <Banknote className="w-5 h-5 text-[#22c55e] flex-shrink-0" />
-                    <span className="text-[#22c55e] text-lg">{plan.price}</span>
-                  </div>
+                <div className="space-y-2 mb-6">
+                  {bike.features.map((feature, idx) => (
+                    <div key={idx} className="flex items-center gap-2 text-white/70 font-light text-sm" style={{ fontFamily: 'Inter, sans-serif' }}>
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#00d563]"></div>
+                      <span>{feature}</span>
+                    </div>
+                  ))}
                 </div>
 
-                <div className="border-t border-white/10 pt-5">
-                  <button
-                    className={`w-full font-bold uppercase text-sm tracking-wider transition-all rounded-sm py-3 px-6
-                      ${plan.featured
-                        ? "bg-[#22c55e] hover:bg-[#16a34a] text-white hover:shadow-[0_0_20px_rgba(34,197,94,0.5)]"
-                        : "border border-[#22c55e] text-[#22c55e] hover:bg-[#22c55e] hover:text-white"
-                      }`}
-                    style={{ fontFamily: 'Inter, sans-serif' }}
-                  >
-                    Contratar Agora
-                  </button>
-                </div>
+                <a
+                  href="https://wa.me/5515998224881?text=Olá!%20Tenho%20interesse%20na%20moto%20${bike.name.replace(/ /g, '%20')}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full bg-[#00d563] hover:bg-[#00ff77] text-[#0a0a0a] px-6 py-3 font-bold uppercase text-sm tracking-wider transition-all hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(0,213,99,0.4)] rounded-lg text-center"
+                  style={{ fontFamily: 'Inter, sans-serif' }}
+                >
+                  {bike.cta}
+                </a>
               </div>
             </motion.div>
           ))}

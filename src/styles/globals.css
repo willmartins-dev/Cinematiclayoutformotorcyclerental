@@ -3,6 +3,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
@@ -12,8 +16,8 @@ body {
 }
 
 ::selection {
-  background-color: #22c55e;
-  color: #ffffff;
+  background-color: #00d563;
+  color: #0a0a0a;
 }
 
 ::-webkit-scrollbar {
@@ -21,14 +25,14 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #192334;
+  background: #1a1f1e;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #22c55e;
+  background: #00d563;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #16a34a;
+  background: #00ff77;
 }

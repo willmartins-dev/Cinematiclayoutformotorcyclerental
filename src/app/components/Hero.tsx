@@ -1,7 +1,6 @@
 import { motion } from "motion/react";
 import { ChevronDown } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import logo from "@/assets/logo.png";
 
 export function Hero() {
   const scrollToServices = () => {
@@ -14,11 +13,11 @@ export function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <ImageWithFallback
-          src="https://images.unsplash.com/photo-1591259966748-4e4b9916858f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb3RvcmN5Y2xlJTIwcmFjaW5nJTIwZGFyayUyMHByb2Zlc3Npb25hbHxlbnwxfHx8fDE3NzkyMDAwMTd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-          alt="Motorcycle"
+          src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920"
+          alt="Motoboy"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#192334]/80 via-[#192334]/60 to-[#192334]"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1a1f1e]/90 via-[#1a1f1e]/70 to-[#1a1f1e]"></div>
       </div>
 
       {/* Navigation */}
@@ -26,62 +25,62 @@ export function Hero() {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative z-10 flex justify-between items-center px-6 md:px-12 lg:px-20 py-6 backdrop-blur-sm"
+        className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 md:px-12 lg:px-20 py-6 backdrop-blur-md bg-[#1a1f1e]/80 border-b border-[#00d563]/10"
       >
-        <a href="#">
-          <img src={logo} alt="Modo Corre" className="h-10 md:h-12 w-auto object-contain" />
-        </a>
+        <div className="text-2xl md:text-3xl font-bold text-white tracking-tight" style={{ fontFamily: 'Orbitron, sans-serif' }}>
+          MODO <span className="text-[#00d563]">CORRE</span>
+        </div>
         <div className="hidden md:flex gap-8 text-white/80 font-medium">
-          <a href="#services" className="hover:text-[#22c55e] transition-all duration-300 relative group">
-            Serviços
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#22c55e] transition-all duration-300 group-hover:w-full"></span>
+          <a href="#services" className="hover:text-[#00d563] transition-all duration-300 relative group">
+            Planos
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#00d563] transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a href="#fleet" className="hover:text-[#22c55e] transition-all duration-300 relative group">
-            Frota
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#22c55e] transition-all duration-300 group-hover:w-full"></span>
+          <a href="#fleet" className="hover:text-[#00d563] transition-all duration-300 relative group">
+            Motos
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#00d563] transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a href="#about" className="hover:text-[#22c55e] transition-all duration-300 relative group">
-            Sobre
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#22c55e] transition-all duration-300 group-hover:w-full"></span>
+          <a href="#about" className="hover:text-[#00d563] transition-all duration-300 relative group">
+            Diferenciais
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#00d563] transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a href="#contact" className="hover:text-[#22c55e] transition-all duration-300 relative group">
+          <a href="#contact" className="hover:text-[#00d563] transition-all duration-300 relative group">
             Contato
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#22c55e] transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#00d563] transition-all duration-300 group-hover:w-full"></span>
           </a>
         </div>
       </motion.nav>
 
       {/* Hero Content */}
-      <div className="relative z-10 h-[calc(100vh-100px)] flex flex-col justify-center items-center text-center px-6">
+      <div className="relative z-10 h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
           className="max-w-6xl"
         >
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.6 }}
-            className="text-[#22c55e] uppercase tracking-[0.4em] text-xs md:text-sm mb-6 font-semibold"
-            style={{ fontFamily: 'Inter, sans-serif' }}
-          >
-            Locadora de Motos Premium
-          </motion.p>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-8 leading-[1.1]" style={{ fontFamily: 'Orbitron, sans-serif', letterSpacing: '-0.03em' }}>
-            COMECE A TRABALHAR
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-8 leading-tight" style={{ fontFamily: 'Orbitron, sans-serif', letterSpacing: '-0.02em' }}>
+            Alugue uma moto e
             <br />
-            <span className="text-[#22c55e]">HOJE MESMO!</span>
+            comece a <span className="text-[#00d563] relative inline-block">
+              trabalhar hoje
+              <motion.span
+                initial={{ width: 0 }}
+                animate={{ width: "100%" }}
+                transition={{ duration: 1, delay: 1.5 }}
+                className="absolute bottom-2 left-0 h-1 bg-[#00d563]"
+              ></motion.span>
+            </span> mesmo!
           </h1>
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.9 }}
-            className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto mb-12 font-light leading-relaxed"
+            className="text-white/70 text-lg md:text-xl max-w-3xl mx-auto mb-12 font-light leading-relaxed"
             style={{ fontFamily: 'Inter, sans-serif' }}
           >
-            Experimente a adrenalina de pilotar as melhores motos do mercado.
-            Segurança, qualidade e liberdade em cada quilômetro.
+            Alugue sua moto sem burocracia e sem looooonga fila de aprovação!
+            <br />
+            Facilitamos o acesso a motos de qualidade para que você possa se concentrar no que realmente importa: trabalhar e prosperar.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -91,17 +90,17 @@ export function Hero() {
           >
             <a
               href="#contact"
-              className="bg-[#22c55e] hover:bg-[#16a34a] text-white px-10 py-4 text-base font-bold uppercase tracking-wider transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(34,197,94,0.5)] rounded-sm"
+              className="bg-[#00d563] hover:bg-[#00ff77] text-[#0a0a0a] px-10 py-4 text-base font-bold uppercase tracking-wider transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(0,213,99,0.5)] rounded-lg"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
               Alugue Agora
             </a>
             <a
               href="#fleet"
-              className="border-2 border-white/30 hover:border-[#22c55e] text-white px-10 py-4 text-base font-bold uppercase tracking-wider transition-all hover:bg-[#22c55e]/10 rounded-sm backdrop-blur-sm"
+              className="border-2 border-[#00d563]/50 hover:border-[#00d563] text-white px-10 py-4 text-base font-bold uppercase tracking-wider transition-all hover:bg-[#00d563]/10 rounded-lg backdrop-blur-sm"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
-              Ver Frota
+              Ver Motos
             </a>
           </motion.div>
         </motion.div>

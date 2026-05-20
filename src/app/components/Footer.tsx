@@ -1,63 +1,50 @@
-import { Facebook, Instagram, Youtube, Twitter } from "lucide-react";
-import logo from "@/assets/logo.png";
+import { MessageCircle } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-[#192334] border-t border-white/5">
+    <footer className="bg-[#0f1513] border-t border-[#00d563]/20">
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
-            <div className="mb-6">
-              <img src={logo} alt="Modo Corre" className="h-10 w-auto object-contain" />
+            <div className="text-3xl font-bold text-white mb-6" style={{ fontFamily: 'Orbitron, sans-serif' }}>
+              MODO <span className="text-[#00d563]">CORRE</span>
             </div>
-            <p className="text-white/50 mb-8 max-w-md font-light leading-relaxed" style={{ fontFamily: 'Inter, sans-serif' }}>
-              A melhor locadora de motos premium do Brasil. Liberdade, segurança
-              e adrenalina em cada viagem.
+            <p className="text-white/60 mb-8 max-w-md font-light leading-relaxed" style={{ fontFamily: 'Inter, sans-serif' }}>
+              A melhor solução de aluguel de motos para motoboys profissionais.
+              Sem burocracia, com suporte completo e motos sempre prontas para trabalhar.
             </p>
-            <div className="flex gap-3">
-              <a href="#" className="bg-[#1e2d42] hover:bg-[#22c55e] p-3 transition-all duration-300 rounded-sm border border-white/5 hover:border-[#22c55e] group">
-                <Facebook className="w-5 h-5 text-white/70 group-hover:text-white transition-colors" />
-              </a>
-              <a href="#" className="bg-[#1e2d42] hover:bg-[#22c55e] p-3 transition-all duration-300 rounded-sm border border-white/5 hover:border-[#22c55e] group">
-                <Instagram className="w-5 h-5 text-white/70 group-hover:text-white transition-colors" />
-              </a>
-              <a href="#" className="bg-[#1e2d42] hover:bg-[#22c55e] p-3 transition-all duration-300 rounded-sm border border-white/5 hover:border-[#22c55e] group">
-                <Youtube className="w-5 h-5 text-white/70 group-hover:text-white transition-colors" />
-              </a>
-              <a href="#" className="bg-[#1e2d42] hover:bg-[#22c55e] p-3 transition-all duration-300 rounded-sm border border-white/5 hover:border-[#22c55e] group">
-                <Twitter className="w-5 h-5 text-white/70 group-hover:text-white transition-colors" />
-              </a>
-            </div>
+            <a
+              href="https://wa.me/5515998224881"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-[#00d563] hover:bg-[#00ff77] text-[#0a0a0a] px-6 py-3 rounded-lg font-bold transition-all hover:scale-105 hover:shadow-[0_0_20px_rgba(0,213,99,0.4)]"
+              style={{ fontFamily: 'Inter, sans-serif' }}
+            >
+              <MessageCircle className="w-5 h-5" />
+              Fale Conosco no WhatsApp
+            </a>
           </div>
 
           {/* Links */}
           <div>
             <h3 className="text-white font-bold mb-6" style={{ fontFamily: 'Inter, sans-serif' }}>Links Rápidos</h3>
             <ul className="space-y-3">
-              <li><a href="#services" className="text-white/50 hover:text-[#22c55e] transition-colors font-light" style={{ fontFamily: 'Inter, sans-serif' }}>Serviços</a></li>
-              <li><a href="#fleet" className="text-white/50 hover:text-[#22c55e] transition-colors font-light" style={{ fontFamily: 'Inter, sans-serif' }}>Frota</a></li>
-              <li><a href="#about" className="text-white/50 hover:text-[#22c55e] transition-colors font-light" style={{ fontFamily: 'Inter, sans-serif' }}>Sobre Nós</a></li>
-              <li><a href="#contact" className="text-white/50 hover:text-[#22c55e] transition-colors font-light" style={{ fontFamily: 'Inter, sans-serif' }}>Contato</a></li>
-            </ul>
-          </div>
-
-          {/* Legal */}
-          <div>
-            <h3 className="text-white font-bold mb-6" style={{ fontFamily: 'Inter, sans-serif' }}>Informações</h3>
-            <ul className="space-y-3">
-              <li><a href="#" className="text-white/50 hover:text-[#22c55e] transition-colors font-light" style={{ fontFamily: 'Inter, sans-serif' }}>Termos de Uso</a></li>
-              <li><a href="#" className="text-white/50 hover:text-[#22c55e] transition-colors font-light" style={{ fontFamily: 'Inter, sans-serif' }}>Política de Privacidade</a></li>
-              <li><a href="#" className="text-white/50 hover:text-[#22c55e] transition-colors font-light" style={{ fontFamily: 'Inter, sans-serif' }}>FAQ</a></li>
-              <li><a href="#" className="text-white/50 hover:text-[#22c55e] transition-colors font-light" style={{ fontFamily: 'Inter, sans-serif' }}>Blog</a></li>
+              <li><a href="#services" className="text-white/60 hover:text-[#00d563] transition-colors font-light" style={{ fontFamily: 'Inter, sans-serif' }}>Planos</a></li>
+              <li><a href="#fleet" className="text-white/60 hover:text-[#00d563] transition-colors font-light" style={{ fontFamily: 'Inter, sans-serif' }}>Motos</a></li>
+              <li><a href="#about" className="text-white/60 hover:text-[#00d563] transition-colors font-light" style={{ fontFamily: 'Inter, sans-serif' }}>Depoimentos</a></li>
+              <li><a href="#contact" className="text-white/60 hover:text-[#00d563] transition-colors font-light" style={{ fontFamily: 'Inter, sans-serif' }}>Contato</a></li>
             </ul>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-white/5 pt-8 text-center">
-          <p className="text-white/30 font-light" style={{ fontFamily: 'Inter, sans-serif' }}>
-            © 2026 Modo Corre. Todos os direitos reservados.
+        <div className="border-t border-[#00d563]/20 pt-8 text-center">
+          <p className="text-white/40 font-light text-sm mb-2" style={{ fontFamily: 'Inter, sans-serif' }}>
+            BRASIL, FRANQUIAS E PARTICIPAÇÕES LTDA
+          </p>
+          <p className="text-white/60 font-light" style={{ fontFamily: 'Inter, sans-serif' }}>
+            Copyright © 2024 Modo Corre. Todos os direitos reservados.
           </p>
         </div>
       </div>

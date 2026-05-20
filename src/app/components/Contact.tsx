@@ -1,33 +1,14 @@
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
-import { useRef, useState } from "react";
-import { Phone, Mail, MapPin, Send } from "lucide-react";
+import { useRef } from "react";
+import { Globe, Phone, Clock, MapPin, Mail } from "lucide-react";
 
 export function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: ""
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
   return (
-    <section id="contact" className="relative py-24 md:py-36 bg-[#243347]">
+    <section id="contact" className="relative py-24 md:py-36 bg-[#1a1f1e]">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <motion.div
           ref={ref}
@@ -36,21 +17,14 @@ export function Contact() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <p className="text-[#22c55e] uppercase tracking-[0.4em] text-xs md:text-sm mb-6 font-semibold" style={{ fontFamily: 'Inter, sans-serif' }}>
-            Fale Conosco
-          </p>
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight" style={{ fontFamily: 'Orbitron, sans-serif', letterSpacing: '-0.02em' }}>
-            PRONTO PARA
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-8 leading-tight" style={{ fontFamily: 'Orbitron, sans-serif', letterSpacing: '-0.02em' }}>
+            COMERCIAL PARA INVESTIDORES
             <br />
-            <span className="text-[#22c55e]">ACELERAR?</span>
+            <span className="text-[#00d563]">E FRANQUIAS</span>
           </h2>
-          <p className="text-white/50 text-lg max-w-2xl mx-auto font-light leading-relaxed" style={{ fontFamily: 'Inter, sans-serif' }}>
-            Entre em contato conosco e reserve sua moto. Nossa equipe está pronta
-            para te atender.
-          </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -58,139 +32,87 @@ export function Contact() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-6"
           >
-            <div className="flex items-start gap-5 group bg-[#1e2d42] border border-white/5 p-6 hover:border-[#22c55e] transition-all duration-300 rounded-sm">
-              <div className="bg-[#22c55e] p-4 group-hover:scale-110 transition-transform rounded-sm">
-                <Phone className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-white mb-2" style={{ fontFamily: 'Inter, sans-serif' }}>Telefone</h3>
-                <p className="text-white/60 font-light" style={{ fontFamily: 'Inter, sans-serif' }}>+55 (11) 9 9999-9999</p>
-                <p className="text-white/40 text-sm font-light" style={{ fontFamily: 'Inter, sans-serif' }}>Seg - Dom: 24h</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-5 group bg-[#1e2d42] border border-white/5 p-6 hover:border-[#22c55e] transition-all duration-300 rounded-sm">
-              <div className="bg-[#22c55e] p-4 group-hover:scale-110 transition-transform rounded-sm">
-                <Mail className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-white mb-2" style={{ fontFamily: 'Inter, sans-serif' }}>E-mail</h3>
-                <p className="text-white/60 font-light" style={{ fontFamily: 'Inter, sans-serif' }}>contato@modocorre.com.br</p>
-                <p className="text-white/40 text-sm font-light" style={{ fontFamily: 'Inter, sans-serif' }}>Resposta em até 2h</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-5 group bg-[#1e2d42] border border-white/5 p-6 hover:border-[#22c55e] transition-all duration-300 rounded-sm">
-              <div className="bg-[#22c55e] p-4 group-hover:scale-110 transition-transform rounded-sm">
-                <MapPin className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-white mb-2" style={{ fontFamily: 'Inter, sans-serif' }}>Endereço</h3>
-                <p className="text-white/60 font-light" style={{ fontFamily: 'Inter, sans-serif' }}>Av. Paulista, 1000</p>
-                <p className="text-white/40 text-sm font-light" style={{ fontFamily: 'Inter, sans-serif' }}>São Paulo - SP, 01310-100</p>
-              </div>
-            </div>
-
-            <div className="bg-[#1e2d42] border border-white/5 p-8 mt-6 rounded-sm">
-              <h3 className="text-xl font-bold text-white mb-4" style={{ fontFamily: 'Inter, sans-serif' }}>Horário de Funcionamento</h3>
-              <div className="space-y-3 text-white/60 font-light" style={{ fontFamily: 'Inter, sans-serif' }}>
-                <div className="flex justify-between">
-                  <span>Segunda - Sexta</span>
-                  <span className="text-[#22c55e] font-semibold">24 horas</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Sábado - Domingo</span>
-                  <span className="text-[#22c55e] font-semibold">24 horas</span>
+            <div className="bg-[#1f2827] border border-[#00d563]/20 p-8 rounded-lg">
+              <div className="flex items-start gap-4 mb-6">
+                <Globe className="w-6 h-6 text-[#00d563]" />
+                <div>
+                  <h3 className="text-white font-bold mb-2" style={{ fontFamily: 'Inter, sans-serif' }}>Website</h3>
+                  <a href="https://investfleet.com.br" className="text-[#00d563] hover:underline font-light" style={{ fontFamily: 'Inter, sans-serif' }}>
+                    https://investfleet.com.br/
+                  </a>
                 </div>
               </div>
+
+              <div className="flex items-start gap-4 mb-6">
+                <Phone className="w-6 h-6 text-[#00d563]" />
+                <div>
+                  <h3 className="text-white font-bold mb-2" style={{ fontFamily: 'Inter, sans-serif' }}>Telefone</h3>
+                  <p className="text-white/70 font-light" style={{ fontFamily: 'Inter, sans-serif' }}>15-99822-4881</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4 mb-6">
+                <Clock className="w-6 h-6 text-[#00d563]" />
+                <div>
+                  <h3 className="text-white font-bold mb-2" style={{ fontFamily: 'Inter, sans-serif' }}>Horário</h3>
+                  <p className="text-white/70 font-light" style={{ fontFamily: 'Inter, sans-serif' }}>De segunda a sexta das 06h as 18h</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4 mb-6">
+                <MapPin className="w-6 h-6 text-[#00d563]" />
+                <div>
+                  <h3 className="text-white font-bold mb-2" style={{ fontFamily: 'Inter, sans-serif' }}>Endereço</h3>
+                  <p className="text-white/70 font-light" style={{ fontFamily: 'Inter, sans-serif' }}>
+                    Avenida doutor Julio Prestes, 688, Centro, Itapetininga-SP CEP 18200000
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <Mail className="w-6 h-6 text-[#00d563]" />
+                <div>
+                  <h3 className="text-white font-bold mb-2" style={{ fontFamily: 'Inter, sans-serif' }}>E-mail</h3>
+                  <a href="mailto:contato@investfleet.com.br" className="text-[#00d563] hover:underline font-light" style={{ fontFamily: 'Inter, sans-serif' }}>
+                    contato@investfleet.com.br
+                  </a>
+                </div>
+              </div>
+
+              <div className="mt-6 pt-6 border-t border-[#00d563]/20">
+                <p className="text-white/60 font-light text-sm" style={{ fontFamily: 'Inter, sans-serif' }}>
+                  Instagram: @investfleet
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-[#1f2827] border border-[#00d563]/20 p-6 rounded-lg text-center">
+              <p className="text-white/50 text-sm font-light mb-2" style={{ fontFamily: 'Inter, sans-serif' }}>
+                BRASIL, FRANQUIAS E PARTICIPAÇÕES LTDA
+              </p>
+              <p className="text-white font-bold" style={{ fontFamily: 'Orbitron, sans-serif' }}>
+                Copyright © 2024 Modo Corre
+              </p>
             </div>
           </motion.div>
 
-          {/* Contact Form */}
+          {/* Map */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-[#1e2d42] border border-white/5 p-8 rounded-sm"
+            className="bg-[#1f2827] border border-[#00d563]/20 p-4 rounded-lg h-[600px]"
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-white mb-3 font-semibold" style={{ fontFamily: 'Inter, sans-serif' }}>
-                  Nome Completo
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full bg-[#192334]/80 border border-white/10 text-white px-5 py-4 focus:outline-none focus:border-[#22c55e] transition-colors rounded-sm font-light placeholder:text-white/30"
-                  placeholder="Seu nome"
-                  style={{ fontFamily: 'Inter, sans-serif' }}
-                />
-              </div>
-
-              <div>
-                <label htmlFor="email" className="block text-white mb-3 font-semibold" style={{ fontFamily: 'Inter, sans-serif' }}>
-                  E-mail
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full bg-[#192334]/80 border border-white/10 text-white px-5 py-4 focus:outline-none focus:border-[#22c55e] transition-colors rounded-sm font-light placeholder:text-white/30"
-                  placeholder="seu@email.com"
-                  style={{ fontFamily: 'Inter, sans-serif' }}
-                />
-              </div>
-
-              <div>
-                <label htmlFor="phone" className="block text-white mb-3 font-semibold" style={{ fontFamily: 'Inter, sans-serif' }}>
-                  Telefone
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  required
-                  className="w-full bg-[#192334]/80 border border-white/10 text-white px-5 py-4 focus:outline-none focus:border-[#22c55e] transition-colors rounded-sm font-light placeholder:text-white/30"
-                  placeholder="(11) 99999-9999"
-                  style={{ fontFamily: 'Inter, sans-serif' }}
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-white mb-3 font-semibold" style={{ fontFamily: 'Inter, sans-serif' }}>
-                  Mensagem
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={4}
-                  className="w-full bg-[#192334]/80 border border-white/10 text-white px-5 py-4 focus:outline-none focus:border-[#22c55e] transition-colors resize-none rounded-sm font-light placeholder:text-white/30"
-                  placeholder="Conte-nos sobre sua necessidade..."
-                  style={{ fontFamily: 'Inter, sans-serif' }}
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                className="w-full bg-[#22c55e] hover:bg-[#16a34a] text-white px-8 py-4 font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(34,197,94,0.4)] rounded-sm"
-                style={{ fontFamily: 'Inter, sans-serif' }}
-              >
-                <Send className="w-5 h-5" />
-                Enviar Mensagem
-              </button>
-            </form>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.123456789!2d-47.9876543!3d-23.5912345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDM1JzI4LjQiUyA0N8KwNTknMTUuNiJX!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+              width="100%"
+              height="100%"
+              style={{ border: 0, borderRadius: '0.5rem' }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Localização Modo Corre"
+            />
           </motion.div>
         </div>
       </div>
