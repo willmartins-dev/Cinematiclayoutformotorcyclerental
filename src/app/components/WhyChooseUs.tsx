@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { Check } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import banner2 from "../../assets/banner2.png";
+import depo1 from "../../assets/depo1.png";
 
 const testimonials = [
   {
@@ -13,9 +14,9 @@ const testimonials = [
     text: "\"A Modo Corre facilitou meu trabalho! Agora tenho uma moto sempre revisada e segura para rodar.\""
   },
   {
-    name: "Rafael M",
+    name: "Paulo",
     age: "32 anos",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=150",
+    image: depo1,
     text: "\"O atendimento é rápido e transparente. Consegui alugar sem burocracia e comecei a trabalhar no mesmo dia!\""
   },
   {
