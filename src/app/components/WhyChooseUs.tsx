@@ -3,6 +3,7 @@ import { useInView } from "motion/react";
 import { useRef } from "react";
 import { Check } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import banner2 from "../../assets/banner2.png";
 
 const testimonials = [
   {
@@ -45,7 +46,12 @@ export function WhyChooseUs() {
   return (
     <>
       {/* Depoimentos */}
-      <section id="about" className="relative py-24 md:py-36 bg-[#1a1f1e]">
+      <section id="about" className="relative py-24 md:py-36">
+        {/* Background */}
+        <div className="absolute inset-0">
+          <img src={banner2} alt="" className="w-full h-full object-cover object-center" />
+          <div className="absolute inset-0 bg-[#0f1513]/85" />
+        </div>
         <div className="relative max-w-7xl mx-auto px-6 md:px-12">
           <motion.div
             ref={ref}
