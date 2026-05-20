@@ -1,38 +1,38 @@
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef } from "react";
-import { MapPin, Shield, Headphones, Phone, FileCheck, Wrench } from "lucide-react";
+import { Bike, Award, ShieldCheck, Phone, FileCheck, Wrench } from "lucide-react";
 
 const services = [
   {
-    icon: MapPin,
-    title: "Rastreamento",
-    description: "24H CORRENDO A CIDADE, 24H MONITORADA E SEGURA."
+    icon: Bike,
+    title: "Planos De Locação",
+    description: "SEM CONSULTA A SPC E SERASA, negociação facilitada."
   },
   {
-    icon: Shield,
-    title: "Seguro SP Seguros",
-    description: "Não se preocupe com nada. Nós cuidamos de tudo."
+    icon: Award,
+    title: "Planos De Aquisição",
+    description: "você aluga por um tempo e ao final do contrato a moto é sua. Sem burocracia."
   },
   {
-    icon: Headphones,
-    title: "Suporte Para Você",
-    description: "ESTAMOS SEMPRE AQUI PARA AJUDAR NO QUE PRECISAR."
+    icon: ShieldCheck,
+    title: "Proteção Para Você",
+    description: "Proteção para sua moto e segurança para sua família."
   },
   {
     icon: Phone,
-    title: "Assistência via Central De Atendimento",
-    description: "Suporte completo para qualquer situação."
+    title: "Assistência Via Central De Atendimento",
+    description: "Fale com nossa central pelo WhatsApp ou 0800 065 0101."
   },
   {
     icon: FileCheck,
     title: "Sem Impostos",
-    description: "Alugue sem se preocupar com burocracia e taxas."
+    description: "Durante o contrato, nada de IPVA ou licenciamento."
   },
   {
     icon: Wrench,
     title: "Manutenção",
-    description: "Motos sempre revisadas e prontas para rodar."
+    description: "Foque no trabalho, a manutenção preventiva é por nossa conta. Incluso trocas de óleo e revisão do motor."
   }
 ];
 
@@ -53,11 +53,14 @@ export function Services() {
           <p className="text-[#00d563] uppercase tracking-[0.4em] text-xs md:text-sm mb-6 font-semibold" style={{ fontFamily: 'Inter, sans-serif' }}>
             Suporte Completo
           </p>
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight" style={{ fontFamily: 'Orbitron, sans-serif', letterSpacing: '-0.02em' }}>
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-black text-white leading-tight mb-6" style={{ fontFamily: 'Orbitron, sans-serif', letterSpacing: '-0.02em' }}>
             Mais Do Que Aluguel: <span className="text-[#00d563]">Suporte Completo</span>
             <br />
-            Para Quem Vive Sobre Duas Rodas
+            Para Quem Vive Sobre Duas Rodas.
           </h2>
+          <p className="text-white/70 text-base md:text-lg max-w-4xl mx-auto font-light leading-relaxed" style={{ fontFamily: 'Inter, sans-serif' }}>
+            Na Modo Corre você não aluga apenas uma moto. Junto com o aluguel você usufrui de amplos benefícios que te trazem conforto e segurança para trabalhar. Além disso, temos planos onde você pode se tornar dono da motocicleta sem burocracia e sem precisar ter o nome limpo. Nós cuidamos de <span className="text-[#00d563]">tudo pra você!</span>
+          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -83,6 +86,18 @@ export function Services() {
               </motion.div>
             );
           })}
+        </div>
+
+        <div className="text-center mt-16">
+          <a
+            href="https://wa.me/5515998224881?text=Olá!%20Quero%20falar%20com%20um%20consultor"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-[#00d563] hover:bg-[#00ff77] text-[#0a0a0a] px-12 py-5 text-lg font-bold uppercase tracking-wider transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(0,213,99,0.6)] rounded-lg"
+            style={{ fontFamily: 'Inter, sans-serif' }}
+          >
+            Falar Com Um Consultor
+          </a>
         </div>
       </div>
     </section>

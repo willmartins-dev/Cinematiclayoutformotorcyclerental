@@ -17,7 +17,7 @@ export function Contact() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-8 leading-tight" style={{ fontFamily: 'Orbitron, sans-serif', letterSpacing: '-0.02em' }}>
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-black text-white mb-8 leading-tight" style={{ fontFamily: 'Orbitron, sans-serif', letterSpacing: '-0.02em' }}>
             COMERCIAL PARA INVESTIDORES
             <br />
             <span className="text-[#00d563]">E FRANQUIAS</span>
@@ -55,7 +55,7 @@ export function Contact() {
                 <Clock className="w-6 h-6 text-[#00d563]" />
                 <div>
                   <h3 className="text-white font-bold mb-2" style={{ fontFamily: 'Inter, sans-serif' }}>Horário</h3>
-                  <p className="text-white/70 font-light" style={{ fontFamily: 'Inter, sans-serif' }}>De segunda a sexta das 06h as 18h</p>
+                  <p className="text-white/70 font-light" style={{ fontFamily: 'Inter, sans-serif' }}>De segunda a sexta das 08h as 18h</p>
                 </div>
               </div>
 
@@ -64,7 +64,7 @@ export function Contact() {
                 <div>
                   <h3 className="text-white font-bold mb-2" style={{ fontFamily: 'Inter, sans-serif' }}>Endereço</h3>
                   <p className="text-white/70 font-light" style={{ fontFamily: 'Inter, sans-serif' }}>
-                    Avenida doutor Julio Prestes, 688, Centro, Itapetininga-SP CEP 18200000
+                    Avenida doutor Julio Prestes, 688, Centro, Itapetininga-SP CEP 18200100
                   </p>
                 </div>
               </div>

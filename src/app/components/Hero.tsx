@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Facebook, Instagram } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 export function Hero() {
@@ -27,98 +27,98 @@ export function Hero() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 md:px-12 lg:px-20 py-6 backdrop-blur-md bg-[#1a1f1e]/80 border-b border-[#00d563]/10"
       >
-        <div className="text-2xl md:text-3xl font-bold text-white tracking-tight" style={{ fontFamily: 'Orbitron, sans-serif' }}>
-          MODO <span className="text-[#00d563]">CORRE</span>
+        <div className="flex flex-col leading-none">
+          <span className="text-[10px] text-white/60 uppercase tracking-widest font-medium" style={{ fontFamily: 'Inter, sans-serif' }}>SEMINOVAS</span>
+          <div className="text-2xl md:text-3xl font-bold text-white tracking-tight" style={{ fontFamily: 'Orbitron, sans-serif' }}>
+            MODO <span className="text-[#00d563]">CORRE</span>
+          </div>
         </div>
-        <div className="hidden md:flex gap-8 text-white/80 font-medium">
-          <a href="#services" className="hover:text-[#00d563] transition-all duration-300 relative group">
-            Planos
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#00d563] transition-all duration-300 group-hover:w-full"></span>
+        <div className="flex items-center gap-4">
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/70 hover:text-[#00d563] transition-colors"
+          >
+            <Facebook size={22} />
           </a>
-          <a href="#fleet" className="hover:text-[#00d563] transition-all duration-300 relative group">
-            Motos
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#00d563] transition-all duration-300 group-hover:w-full"></span>
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/70 hover:text-[#00d563] transition-colors"
+          >
+            <Instagram size={22} />
           </a>
-          <a href="#about" className="hover:text-[#00d563] transition-all duration-300 relative group">
-            Diferenciais
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#00d563] transition-all duration-300 group-hover:w-full"></span>
-          </a>
-          <a href="#contact" className="hover:text-[#00d563] transition-all duration-300 relative group">
-            Contato
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#00d563] transition-all duration-300 group-hover:w-full"></span>
+          <a
+            href="https://wa.me/5515998224881"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border-2 border-[#00d563] text-[#00d563] hover:bg-[#00d563] hover:text-[#0a0a0a] px-5 py-2 text-sm font-bold uppercase tracking-wider transition-all rounded-lg"
+            style={{ fontFamily: 'Inter, sans-serif' }}
+          >
+            WhatsApp
           </a>
         </div>
       </motion.nav>
 
       {/* Hero Content */}
-      <div className="relative z-10 h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
+      <div className="relative z-10 h-screen flex flex-col justify-center items-start px-6 md:px-12 lg:px-20 pt-20 max-w-3xl">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-          className="max-w-6xl"
         >
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-8 leading-tight" style={{ fontFamily: 'Orbitron, sans-serif', letterSpacing: '-0.02em' }}>
-            Alugue uma moto e
-            <br />
-            comece a <span className="text-[#00d563] relative inline-block">
-              trabalhar hoje
-              <motion.span
-                initial={{ width: 0 }}
-                animate={{ width: "100%" }}
-                transition={{ duration: 1, delay: 1.5 }}
-                className="absolute bottom-2 left-0 h-1 bg-[#00d563]"
-              ></motion.span>
-            </span> mesmo!
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-black text-white mb-4 leading-tight" style={{ fontFamily: 'Orbitron, sans-serif', letterSpacing: '-0.02em' }}>
+            Alugue uma moto e comece a trabalhar hoje mesmo!
           </h1>
-          <motion.p
+          <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-[#00d563] mb-6" style={{ fontFamily: 'Orbitron, sans-serif' }}>
+            Escolha a Modo Corre
+          </h2>
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.9 }}
-            className="text-white/70 text-lg md:text-xl max-w-3xl mx-auto mb-12 font-light leading-relaxed"
-            style={{ fontFamily: 'Inter, sans-serif' }}
+            className="mb-8"
           >
-            Alugue sua moto sem burocracia e sem looooonga fila de aprovação!
-            <br />
-            Facilitamos o acesso a motos de qualidade para que você possa se concentrar no que realmente importa: trabalhar e prosperar.
-          </motion.p>
+            <p className="text-white font-bold text-base md:text-lg mb-2" style={{ fontFamily: 'Inter, sans-serif' }}>
+              Adquira sua moto com facilidade e sem burocracia
+            </p>
+            <p className="text-white/80 text-base md:text-lg font-light leading-relaxed" style={{ fontFamily: 'Inter, sans-serif' }}>
+              Com o Plano de Aquisição da <strong className="text-white">Modo Corre</strong>, você aluga e, ao final do contrato, a moto é sua. Manutenção inclusa, seguro completo e parcelas que cabem no seu bolso.
+            </p>
+          </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.2 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <a
-              href="#contact"
-              className="bg-[#00d563] hover:bg-[#00ff77] text-[#0a0a0a] px-10 py-4 text-base font-bold uppercase tracking-wider transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(0,213,99,0.5)] rounded-lg"
+              href="https://wa.me/5515998224881?text=Olá!%20Quero%20falar%20com%20o%20Consultor%20Lucas"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block border-2 border-[#00d563] text-white hover:bg-[#00d563] hover:text-[#0a0a0a] px-10 py-4 text-base font-bold uppercase tracking-wider transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(0,213,99,0.5)] rounded-lg"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
-              Alugue Agora
-            </a>
-            <a
-              href="#fleet"
-              className="border-2 border-[#00d563]/50 hover:border-[#00d563] text-white px-10 py-4 text-base font-bold uppercase tracking-wider transition-all hover:bg-[#00d563]/10 rounded-lg backdrop-blur-sm"
-              style={{ fontFamily: 'Inter, sans-serif' }}
-            >
-              Ver Motos
+              Falar Com Consultor Lucas
             </a>
           </motion.div>
         </motion.div>
-
-        {/* Scroll Indicator */}
-        <motion.button
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1, y: [0, 10, 0] }}
-          transition={{
-            opacity: { duration: 1, delay: 1.5 },
-            y: { duration: 1.5, repeat: Infinity, ease: "easeInOut" }
-          }}
-          onClick={scrollToServices}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/60 hover:text-white transition-colors"
-        >
-          <ChevronDown size={40} />
-        </motion.button>
       </div>
+
+      {/* Scroll Indicator */}
+      <motion.button
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, y: [0, 10, 0] }}
+        transition={{
+          opacity: { duration: 1, delay: 1.5 },
+          y: { duration: 1.5, repeat: Infinity, ease: "easeInOut" }
+        }}
+        onClick={scrollToServices}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/60 hover:text-white transition-colors z-10"
+      >
+        <ChevronDown size={40} />
+      </motion.button>
     </section>
   );
 }

@@ -5,27 +5,29 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 const motorcycles = [
   {
-    name: "Honda CG 160 Start",
-    description: "Moto confiável e econômica, ideal para entregas urbanas",
+    name: "Honda-cg-160-start",
+    description: "Moto confiável, econômica e perfeita para o dia a dia.",
     image: "https://images.unsplash.com/photo-1558981359-219d6364c9c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
     features: ["Baixo consumo", "Manutenção facilitada", "Conforto garantido"],
-    cta: "Ver Detalhes"
+    cta: "Whatsapp"
   },
   {
-    name: "Honda CG 160 Fan",
-    description: "Moto versátil e resistente para longas jornadas de trabalho",
+    name: "Honda-cg-160-fan",
+    description: "Mais conforto e desempenho para quem roda muito.",
     image: "https://images.unsplash.com/photo-1609630875171-b1321377ee65?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
     features: ["Alta durabilidade", "Econômica", "Perfeita para trabalho"],
-    cta: "Ver Detalhes"
+    cta: "Whatsapp"
   },
   {
-    name: "Suzuki GN150",
-    description: "Robusta e eficiente para quem trabalha o dia todo",
+    name: "Suzuki-DK160",
+    description: "Autonomia de sobra e confiabilidade pra qualquer rota.",
     image: "https://images.unsplash.com/photo-1619767886558-efdc259cde1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
     features: ["Motor potente", "Tanque grande", "Confortável"],
-    cta: "Ver Detalhes"
+    cta: "Whatsapp"
   }
 ];
+
+const tickerText = "Motos revisadas e com seguro incluso ❖ Comece a trabalhar hoje mesmo ❖ Transforme seu aluguel em conquista ❖ Modo Corre ❖ Locação de motos ❖ ";
 
 export function Fleet() {
   const ref = useRef(null);
@@ -44,7 +46,7 @@ export function Fleet() {
           <p className="text-[#00d563] uppercase tracking-[0.4em] text-xs md:text-sm mb-6 font-semibold" style={{ fontFamily: 'Inter, sans-serif' }}>
             Escolha Sua Moto
           </p>
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight" style={{ fontFamily: 'Orbitron, sans-serif', letterSpacing: '-0.02em' }}>
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-black text-white mb-6 leading-tight" style={{ fontFamily: 'Orbitron, sans-serif', letterSpacing: '-0.02em' }}>
             Motos Perfeitas Para
             <br />
             <span className="text-[#00d563]">Trabalhar Todo Dia</span>
@@ -90,10 +92,10 @@ export function Fleet() {
                 </div>
 
                 <a
-                  href="https://wa.me/5515998224881?text=Olá!%20Tenho%20interesse%20na%20moto%20${bike.name.replace(/ /g, '%20')}"
+                  href={`https://wa.me/5515998224881?text=Olá!%20Tenho%20interesse%20na%20moto%20${bike.name.replace(/ /g, '%20')}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full bg-[#00d563] hover:bg-[#00ff77] text-[#0a0a0a] px-6 py-3 font-bold uppercase text-sm tracking-wider transition-all hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(0,213,99,0.4)] rounded-lg text-center"
+                  className="block w-full border-2 border-[#333] hover:border-[#00d563] text-[#333] hover:text-[#00d563] bg-white hover:bg-transparent px-6 py-3 font-semibold text-sm tracking-wider transition-all hover:scale-[1.02] rounded-lg text-center"
                   style={{ fontFamily: 'Inter, sans-serif' }}
                 >
                   {bike.cta}
@@ -102,6 +104,21 @@ export function Fleet() {
             </motion.div>
           ))}
         </div>
+      </div>
+
+      {/* Scrolling Ticker */}
+      <div className="overflow-hidden bg-white border-y border-[#00d563]/30 py-3 mt-12">
+        <motion.div
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          className="flex whitespace-nowrap"
+        >
+          {[...Array(4)].map((_, i) => (
+            <span key={i} className="text-[#0a0a0a] font-semibold text-sm uppercase tracking-wide mx-0 inline-block" style={{ fontFamily: 'Inter, sans-serif' }}>
+              {tickerText}
+            </span>
+          ))}
+        </motion.div>
       </div>
     </section>
   );
